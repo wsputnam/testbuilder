@@ -23,7 +23,9 @@ var detectNetwork = function(cardNumber) {
   if ((prefix === '34' || prefix === '37') && cardNumber.length === 15) {
 	return 'American Express';
   }
-  if (cardNumber[0] === '4' && (cardNumber.length === 13 || cardNumber.length === 16 || cardNumber.length === 19)) {
+  if ((longPrefix === '4903' || longPrefix === '4905' || longPrefix === '4911' || longPrefix === '4936' || longPrefix === '6333' || longPrefix === '6759' || extraLong === 633110 || extraLong === 564182) && (cardNumber.length === 16 || cardNumber.length === 18 || cardNumber.length === 19)) {
+  	return 'Switch';
+  } else if (cardNumber[0] === '4' && (cardNumber.length === 13 || cardNumber.length === 16 || cardNumber.length === 19)) {
   	return 'Visa';
   }
   if (cardNumber.length === 16 && (prefix === '51' || prefix === '52' || prefix === '53' || prefix === '54' || prefix === '55')) {
