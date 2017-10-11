@@ -289,32 +289,32 @@ describe('Maestro', function() {
   });
 });
 
-describe('should support China UnionPay', function() {
-  for (var prefix = 622126; prefix <= 622925; prefix++) {
-  (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16');
-    it('has a prefix of ' + prefix + ' and a length of 17');
-    it('has a prefix of ' + prefix + ' and a length of 18');
-    it('has a prefix of ' + prefix + ' and a length of 19');
-  })(prefix)
-}
-for (var prefix = 624; prefix <= 626; prefix++) {
-  (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16');
-    it('has a prefix of ' + prefix + ' and a length of 17');
-    it('has a prefix of ' + prefix + ' and a length of 18');
-    it('has a prefix of ' + prefix + ' and a length of 19');
-  })(prefix)
-}
-for (var prefix = 6282; prefix <= 6288; prefix++) {
-  (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16');
-    it('has a prefix of ' + prefix + ' and a length of 17');
-    it('has a prefix of ' + prefix + ' and a length of 18');
-    it('has a prefix of ' + prefix + ' and a length of 19');
-  })(prefix)
-}
-});
+//describe('should support China UnionPay', function() {
+ // for (var prefix = 622126; prefix <= 622925; prefix++) {
+  //(function(prefix) {
+  //  it('has a prefix of ' + prefix + ' and a length of 16');
+   // it('has a prefix of ' + prefix + ' and a length of 17');
+   // it('has a prefix of ' + prefix + ' and a length of 18');
+   // it('has a prefix of ' + prefix + ' and a length of 19');
+  //})(prefix)
+//}
+//for (var prefix = 624; prefix <= 626; prefix++) {
+ // (function(prefix) {
+  //  it('has a prefix of ' + prefix + ' and a length of 16');
+  //  it('has a prefix of ' + prefix + ' and a length of 17');
+  //  it('has a prefix of ' + prefix + ' and a length of 18');
+  //  it('has a prefix of ' + prefix + ' and a length of 19');
+  //})(prefix)
+//}
+//for (var prefix = 6282; prefix <= 6288; prefix++) {
+  //(function(prefix) {
+  //  it('has a prefix of ' + prefix + ' and a length of 16');
+   // it('has a prefix of ' + prefix + ' and a length of 17');
+   // it('has a prefix of ' + prefix + ' and a length of 18');
+   // it('has a prefix of ' + prefix + ' and a length of 19');
+  //})(prefix)
+//}
+//});
 describe('should support Switch', function() {
   it('has a prefix of 4903 and a length of 16', function() {
     detectNetwork('4903123456788765').should.equal('Switch');
