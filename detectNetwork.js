@@ -16,6 +16,7 @@ var detectNetwork = function(cardNumber) {
   var prefix = cardNumber[0] + cardNumber[1];
   var longPrefix = cardNumber.slice(0, 4);
   var prettyLong = parseInt(cardNumber.slice(0, 3));
+  var extraLong = parseInt(cardNumber.slice(0, 7));
   if ((prefix === '38' || prefix === '39') && cardNumber.length === 14) {
   	return 'Diner\'s Club';
   } 
@@ -33,6 +34,9 @@ var detectNetwork = function(cardNumber) {
   }
   if ((longPrefix === '5018' || longPrefix === '5020' || longPrefix === '5038' || longPrefix === '6304') && (cardNumber.length <= 19 && cardNumber.length >= 12)) {
   	return 'Maestro';
+  }
+  if (((extraLong >= 622126 && extraLong <= 622925) || (prettyLong >= 624 && prettyLong <= 626) || (parseInt(longPrefix) >= 6282 && parseInt(longPrefix) <= 6288)) && (cardNumber.length >= 16 && cardNumber.length <= 19)) {
+  	return 'China UnionPay';
   }
 };
 
